@@ -1,0 +1,18 @@
+<!-- <h1>Questions#answer</h1>
+ --><!-- <p>Find me in app/views/questions/answer.html.erb</p>
+ -->
+<div class="question">
+  <p><%= @answer %></p>
+  <p><em><%= "-You" %></em></p>
+</div>
+
+<div class="answer"><% if @answer.include?('?')%>
+  <%= "Silly question, get dressed and go to work!"%>
+    <p id="bold"><% elsif @answer == "I am going to work"%></p>
+    <p id="bold"><%= "Great!"%></p>
+    <%else %>
+    <p id="bold"><%="I don't care, get dressed and go to work!"%></p>
+  <% end %>
+    <p><em><%= "-Your coach" %></em></p>
+</div>
+<%= link_to "Ask another question", "/ask" %>
